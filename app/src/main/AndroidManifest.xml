@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.freeman.track.ui">
+
     <!-- 腾迅地图需要的权限 -->
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -8,7 +9,7 @@
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <!-- 腾迅地图定位权限 -->
-    <!--<uses-permission android:name="android.permission.ACCESS_MOCK_LOCATION" />-->
+    <!-- <uses-permission android:name="android.permission.ACCESS_MOCK_LOCATION" /> -->
     <!-- 通过GPS得到精确位置 -->
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <!-- 通过网络得到粗略位置 -->
@@ -25,6 +26,7 @@
     <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
     <!-- 访问手机当前状态, 需要某些信息用于网络定位 -->
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -38,12 +40,16 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <!--添加联系人-->
+        <activity android:name=".Activity_add"/>
+
+
         <receiver android:name="com.freeman.track.util.TrackReceiver">
             <intent-filter>
                 <action android:name="ELITOR_CLOCK" />
             </intent-filter>
         </receiver>
-        <!-- 使用SugarORM http://satyan.github.io/sugar/getting-started.html-->
+        <!-- 使用SugarORM http://satyan.github.io/sugar/getting-started.html -->
         <meta-data
             android:name="DATABASE"
             android:value="freeman_track.db" />
@@ -59,8 +65,9 @@
         <!-- 腾迅地图 -->
         <meta-data
             android:name="TencentMapSDK"
-            android:value="6VMBZ-NGRHG-CE2QD-IOKUB-ZAQ5O-ALFSW" >
-        </meta-data>
+            android:value="6VMBZ-NGRHG-CE2QD-IOKUB-ZAQ5O-ALFSW"></meta-data>
+
+
     </application>
 
 </manifest>
