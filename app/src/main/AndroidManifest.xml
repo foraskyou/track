@@ -40,9 +40,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <!--添加联系人-->
-        <activity android:name=".Activity_add"/>
-
+        <!-- 添加联系人 -->
+        <activity android:name=".Activity_add" />
 
         <receiver android:name="com.freeman.track.util.TrackReceiver">
             <intent-filter>
@@ -65,9 +64,18 @@
         <!-- 腾迅地图 -->
         <meta-data
             android:name="TencentMapSDK"
-            android:value="6VMBZ-NGRHG-CE2QD-IOKUB-ZAQ5O-ALFSW"></meta-data>
+            android:value="6VMBZ-NGRHG-CE2QD-IOKUB-ZAQ5O-ALFSW" />
 
+        <activity android:name="com.freeman.track.base.BaseActivity" />
 
+        <service
+            android:name="com.freeman.track.service.PointService"
+            android:exported="false"></service>
+        <!-- ATTENTION: This was auto-generated to add Google Play services to your project for
+             App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information. -->
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
     </application>
 
 </manifest>

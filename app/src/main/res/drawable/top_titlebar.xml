@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <!-- 扫码收款页，白色圆角背景 add cjk 2015-11-18 -->
+    <solid android:color="@android:color/white" />
+
+    <stroke
+        android:width="0.05dp"
+        android:color="@android:color/darker_gray" />
+    </shape>
